@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income/Expenses Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title"> Income/Expenses Tracker</h1>
+
+        <h2 class="section-header"><i class="fas fa-chart-pie"></i> Financial Dashboard</h2>
+        <div class="card">
+            <div class="stats-grid">
+                <div class="stat-box" id="box-income" onclick="setView('Income')">
+                    <p>Total Income</p>
+                    <h3 class="income-text">€<span id="total-income">0.00</span></h3>
+                </div>
+                <div class="stat-box" id="box-expense" onclick="setView('Expense')">
+                    <p>Total Expenses</p>
+                    <h3 class="expense-text">€<span id="total-expenses">0.00</span></h3>
+                </div>
+                <div class="stat-box active" id="box-balance" onclick="setView('All')">
+                    <p>Current Balance</p>
+                    <h3>€<span id="current-balance">0.00</span></h3>
+                </div>
+            </div>
+            
+            <div class="stats-grid" style="margin-top: 15px;">
+                <div class="stat-box" id="box-lent" onclick="setView('Lent')">
+                    <p>Total Lent</p>
+                    <h3 class="income-text">€<span id="total-lent">0.00</span></h3>
+                </div>
+                <div class="stat-box" id="box-borrowed" onclick="setView('Borrowed')">
+                    <p>Total Borrowed</p>
+                    <h3 class="expense-text">€<span id="total-borrowed">0.00</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-header"><i class="fas fa-plus-circle"></i> Add New Data</h2>
+        <div class="card">
+            <h3 class="form-sub-label">Income & Expenses</h3>
+            <form id="transaction-form" class="input-form">
+                <select id="type-input" required>
+                    <option value="Expense" selected>Expense</option>
+                    <option value="Income">Income</option>
+                </select>
+                <input type="date" id="date-input" required>
+                <input type="text" id="desc-input" placeholder="What was it?" required>
+                
+                <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column;">
+                    <input type="number" id="amount-input" placeholder="Amount (€)" step="0.01" required aria-describedby="amount-error">
+                    <small id="amount-error" style="color: red; display: none; margin-top: 5px;">Invalid amount</small>
+                </div>
+
+                <select id="category-input" required>
+                    <option value="" disabled selected>Select Category...</option>
+                    <option value="Wage">Wage</option>
+                    <option value="Family Support">Family Support</option>
+                    <option value="Food">Food & Drink</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Bills">Bills & Utilities</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit" id="tx-submit-btn">Add Entry</button>
+            </form>
+
+            <hr>
+
+            <h3 class="form-sub-label">Lent & Borrowed (Debts)</h3>
+            <form id="debt-form" class="input-form">
+                <select id="debt-type" required>
+                    <option value="Lent" selected>I Lent Money To...</option>
+                    <option value="Borrowed">I Borrowed From...</option>
+                </select>
+                <input type="date" id="debt-date" required>
+                <input type="text" id="person-input" placeholder="Person's Name" required>
+                <input type="text" id="contact-input" placeholder="Contact Number" required>
+                <input type="text" id="remarks-input" placeholder="Remarks" required>
+                
+                <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column;">
+                    <input type="number" id="debt-amount" placeholder="Amount (€)" step="0.01" required aria-describedby="debt-amount-error">
+                    <small id="debt-amount-error" style="color: red; display: none; margin-top: 5px;">Invalid amount</small>
+                </div>
+
+                <button type="submit" id="debt-submit-btn">Add Record</button>
+            </form>
+        </div>
+
+        <h2 class="section-header"><i class="fas fa-list-ul"></i> Transaction History</h2>
+        <div class="card" id="history-container">
+            <div id="transactions-section">
+                <div class="filter-box">
+                    <label>Filter By Category:</label>
+                    <select id="filter-category">
+                        <option value="All">All Categories</option>
+                        <option value="Wage">Wage</option>
+                        <option value="Family Support">Family Support</option>
+                        <option value="Food">Food & Drink</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills & Utilities</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-list"></tbody>
+                </table>
+            </div>
+
+            <div id="debts-section" style="margin-top: 20px;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Person</th>
+                            <th>Remarks</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="debt-list"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+            <button id="export-csv-btn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer;">📥 Download Statement</button>
+            <button id="clear-all-btn" class="delete-btn" style="padding: 10px 20px; font-size: 16px;">⚠️ Clear All Data</button>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Ram Prasad Paudel All rights reserved. 🚀</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/paudelram27" target="_blank" class="fb"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/paudel_ram_27_?igsh=ZmhqcXo5a2FvdmE0" target="_blank" class="ig"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/ram-paudel-a76721380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="in"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

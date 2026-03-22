@@ -135,3 +135,57 @@ hr {
     text-decoration: none;
     font-size: 20px;
 }
+/* =========================================
+   📱 MOBILE RESPONSIVE FIXES
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    /* Stack the stats boxes on top of each other */
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-box {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Make form inputs stack cleanly */
+    .input-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-form input, 
+    .input-form select, 
+    .input-form button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    /* Stop the tables from stretching the mobile screen! */
+    #history-container, .card {
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .data-table {
+        width: 100%;
+        min-width: 600px; /* Forces a neat scrollbar instead of breaking the screen */
+    }
+
+    /* Stack social links */
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

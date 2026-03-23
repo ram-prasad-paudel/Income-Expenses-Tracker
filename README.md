@@ -41,8 +41,17 @@ I built this using modern web technologies to ensure it works perfectly on both 
 2. **Unzip:** Extract the folder to a location on your computer.
 3. **Launch:** - **Windows:** Double-click the `index.html` file to open it in Chrome or Edge.
    - **macOS:** Right-click `index.html` and select **"Open With"** > **"Google Chrome"** or **"Safari"**.
+   
+### My Learning Reflection: 
+"Building this Income and Expense Tracker was a great experience that helped me understand how JavaScript works in a real project. My main goal was to create a simple Dashboard that helps people manage their money. Most apps only track spending, so I wanted mine to be special by also tracking personal debts, like when you lend money to a friend or borrow some from family.
 
-## ✅ Project Self-Assessment (Canvas Rubric)
+One of the biggest technical parts of this project was using the DOM (Document Object Model) . I learned how to use JavaScript to 'talk' to my HTML. For example, when a user clicks 'Add', my code creates a new table row instantly without reloading the page. This makes the app feel fast and modern.
+
+However, I faced several problems during development. At first, my data would disappear every time I hit refresh. To fix this, I learned how to use localStorage . I had to turn my data into a 'JSON string' to save it and then parse it back into a list when the app started again. Another problem was the design; initially, the tables were too wide for a phone screen and looked broken. I solved this by using CSS Flexbox and Media Queries to make the layout stack vertically on mobile.
+
+In the future, I want to improve this project by adding colorful pie charts to show spending patterns. This project has made me much more confident in my coding skills and my ability to solve technical problems. I now feel much more comfortable handling user inputs and managing data in the browser."
+
+## ✅ Project Self-Assessment
 
 | Rubric Category | Self-Score | Technical Justification |
 | :--- | :--- | :--- |

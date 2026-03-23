@@ -21,7 +21,14 @@ This screenshot shows the application running on a mobile phone screen.
 * **Touch-Friendly:** Buttons and form fields remain easy to tap and navigate, ensuring a smooth user experience on the go.
 ![Mobile View](mobile-view.png)
 #  What is this project?
-Most expense trackers only show what you spend. This app is different because it also helps you track **money you have lent to or borrowed from others**. 
+What is this Project?
+Most basic expense trackers only show a list of what you spend at a store. I realized that for many people, especially students and friends, a large part of their "financial health" involves informal money flow — lending someone 10 Euro for lunch or borrowing money for a shared bill.
+
+This app bridges that gap. It is a specialized Dashboard that tracks:
+
+Standard Transactions: Your Everyday income and expenses.
+
+Informal Debts: A dedicated system to track money you are owed or money you owe others.
 
 I built this using modern web technologies to ensure it works perfectly on both your computer and your mobile phone.
 

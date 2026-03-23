@@ -20,8 +20,8 @@ This screenshot shows the application running on a mobile phone screen.
 * **Responsiveness:** When opened on a smartphone, the interface automatically stacks the elements vertically to fit a narrow screen.
 * **Touch-Friendly:** Buttons and form fields remain easy to tap and navigate, ensuring a smooth user experience on the go.
 ![Mobile View](mobile-view.png)
+
 #  What is this project?
-What is this Project?
 Most basic expense trackers only show a list of what you spend at a store. I realized that for many people, especially students and friends, a large part of their "financial health" involves informal money flow — lending someone 10 Euro for lunch or borrowing money for a shared bill.
 
 This app bridges that gap. It is a specialized Dashboard that tracks:
@@ -58,7 +58,7 @@ One of the biggest technical parts of this project was using the DOM (Document O
 However, I faced several problems during development. At first, my data would disappear every time I hit refresh. To fix this, I learned how to use localStorage . I had to turn my data into a 'JSON string' to save it and then parse it back into a list when the app started again. Another problem was the design; initially, the tables were too wide for a phone screen and looked broken. I solved this by using CSS Flexbox and Media Queries to make the layout stack vertically on mobile.
 
 In the future, I want to improve this project by adding colorful pie charts to show spending patterns. This project has made me much more confident in my coding skills and my ability to solve technical problems. I now feel much more comfortable handling user inputs and managing data in the browser.
-Special thanks to Teacher Paresh and my classmates for the support throughout this journey!
+Special thanks to Teacher Paresh Rathod and my classmates for the support throughout this journey!
 ## ✅ Project Self-Assessment
 
 | Rubric Category | Self-Score | Technical Justification |

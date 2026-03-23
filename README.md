@@ -4,7 +4,21 @@ A simple and powerful tool to track your money, debts, and savings in one place.
 
 **🔗 [Click Here to Open the Live App](https://ram-prasad-paudel.github.io/Income-Expenses-Tracker/)**
 
+## 📸 Interface Preview
 
+### 🖥️ Desktop Dashboard View
+This screenshot shows the application running on a full-size computer screen. 
+* **Layout:** Uses a wide-screen dashboard layout.
+* **Functionality:** You can see the main balance card, the input forms for adding transactions, and the scrollable history list all in one clear view.
+![Desktop Dashboard](desktop-view.png)
+
+---
+
+### 📱 Mobile Responsive View
+This screenshot demonstrates the "Mobile-First" design taught in our course.
+* **Responsiveness:** When opened on a smartphone, the interface automatically stacks the elements vertically to fit a narrow screen.
+* **Touch-Friendly:** Buttons and form fields remain easy to tap and navigate, ensuring a smooth user experience on the go.
+![Mobile View](mobile-view.png)
 # 📖 What is this project?
 Most expense trackers only show what you spend. This app is different because it also helps you track **money you have lent to or borrowed from others**. 
 

@@ -26,9 +26,9 @@ Most basic expense trackers only show a list of what you spend at a store. I rea
 
 This app bridges that gap. It is a specialized Dashboard that tracks:
 
-Standard Transactions: Your Everyday income and expenses.
+**Standard Transactions**: Your Everyday income and expenses.
 
-Informal Debts: A dedicated system to track money you are owed or money you owe others.
+**Informal Debts**: A dedicated system to track money you are owed or money you owe others.
 
 I built this using modern web technologies to ensure it works perfectly on both your computer and your mobile phone.
 
@@ -58,7 +58,7 @@ One of the biggest technical parts of this project was using the DOM (Document O
 However, I faced several problems during development. At first, my data would disappear every time I hit refresh. To fix this, I learned how to use localStorage . I had to turn my data into a 'JSON string' to save it and then parse it back into a list when the app started again. Another problem was the design; initially, the tables were too wide for a phone screen and looked broken. I solved this by using CSS Flexbox and Media Queries to make the layout stack vertically on mobile.
 
 In the future, I want to improve this project by adding colorful pie charts to show spending patterns. This project has made me much more confident in my coding skills and my ability to solve technical problems. I now feel much more comfortable handling user inputs and managing data in the browser.
-Special thanks to Teacher Paresh Rathod and my classmates for the support throughout this journey!
+Special thanks to Teacher **Paresh Rathod** and my classmates for the support throughout this journey!
 ## ✅ Project Self-Assessment
 
 | Rubric Category | Self-Score | Technical Justification |

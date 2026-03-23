@@ -1,6 +1,7 @@
 #  Income & Expenses Tracker
+ A simple and powerful tool to track your money, debts, and savings in one place.Most expense trackers only show what you spend at a store. This project, built for **Web Applications - Project 1**, solves a common real-world problem: tracking **informal money flow**. 
 
-A simple and powerful tool to track your money, debts, and savings in one place.
+Whether you are lending 10 Euro to a friend for lunch or borrowing money for a bill, this app provides a 100% accurate picture of your financial health. By combining a **Standard Expense Tracker** with a **Debt Management System**, users can see exactly how much they *actually* have versus what they are owed.
 
 **🔗 [Click Here to Open the Live App](https://ram-prasad-paudel.github.io/Income-Expenses-Tracker/)**
 
